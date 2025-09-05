@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankit Jatav | Portfolio</title>
+    
+    <meta name="description" content="Ankit Jatav - Frontend & C++ Developer. Passionate about web development, DSA, and programming.">
+    <meta name="keywords" content="Ankit Jatav, Portfolio, Frontend Developer, C++ Developer, Web Development">
+    <meta name="author" content="Ankit Jatav">
+
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Ankit Jatav</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="cv/Ankit_JatavResume (1).pdf">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="image/Ankit_image.jpg" alt="Ankit Jatav Profile Picture">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi, I'm a <span class="input">Frontend Developer</span></h5>
+                    <h1>Ankit Jatav</h1>
+                    <p>
+                        Passionate Frontend and C++ Developer with experience in building responsive web applications and engaging user interfaces. 
+                        Enthusiastic about learning full-stack development and backend technologies.
+                    </p>
+
+                    <div class="btn-group">
+                        <a href="cv/Ankit_JatavResume (1).pdf" class="btn active">Download CV</a>
+                        <a href="contact.html" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/ankit.jatav.946517" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/ankit-jatav-81105a223/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/ankit_jatav._/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Ankit-jatav1" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/_Ankit_jatav" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Typed.js for typing effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        /** Toggle mobile navbar **/
+        const toggleBtn = document.querySelector(".togglebtn");
+        const navLinks = document.querySelector(".navlinks");
+
+        toggleBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("open");
+        });
+
+        /** Close nav when clicking outside **/
+        document.addEventListener("click", function (e) {
+            if (!toggleBtn.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove("open");
+            }
+        });
+
+        /** Typing effect **/
+        new Typed(".input", {
+            strings: ["Frontend Developer", "C++ Developer", "DSA Enthusiast"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
+</body>
+</html>
